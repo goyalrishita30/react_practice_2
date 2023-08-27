@@ -40,7 +40,7 @@ function App() {
       <div className="container my-3">
 
       <TextForm heading="Enter the text to analyze below" mode={mode} showAlert={showAlert}/>
-      <About />
+      {/* <About /> */}
       </div>
     </>
   );
