@@ -1,31 +1,32 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const About = () => {
+const About = (props) => {
   const [myStyle, setMyStyle] = useState({
     color: "white",
-    backgroundColor: "black",
+    backgroundColor: "grey",
   });
 
-  const [btnText, setBtnText] = useState("Enable light mode");
+  // const [btnText, setBtnText] = useState("Enable light mode");
 
-  const toggleStyle = () => {
-    if (myStyle.color === "white") {
-      setMyStyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setBtnText("Enable Dark mode");
-    } else {
-      setMyStyle({
-        color: "white",
-        backgroundColor: "black",
-      });
-      setBtnText("Enable light mode");
-    }
-  };
+  // const toggleStyle = () => {
+  //   if (myStyle.color === "white") {
+  //     setMyStyle({
+  //       color: "grey",
+  //       backgroundColor: "white",
+  //     });
+  //     setBtnText("Enable Dark mode");
+  //   } else {
+  //     setMyStyle({
+  //       color: "white",
+  //       backgroundColor: "grey",
+  //     });
+  //     setBtnText("Enable light mode");
+  //   }
+  // };
   return (
-    <div className="container" style={myStyle}>
+    <div className="container" style={{backgroundColor: props.mode==='dark'? 'grey': 'white' ,
+    color: props.mode==='light'? 'black': 'white'}}>
       <h1>About us</h1>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
@@ -46,7 +47,8 @@ const About = () => {
             className="accordion-collapse collapse show"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body"  style={myStyle}>
+            <div className="accordion-body"  style={{backgroundColor: props.mode==='dark'? 'grey': 'white' ,
+    color: props.mode==='light'? 'black': 'white'}}>
               <strong>This is the first item's accordion body.</strong> It is
               shown by default, until the collapse plugin adds the appropriate
               classes that we use to style each element. These classes control
@@ -118,9 +120,9 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="container my-3">
+        {/* <div className="container my-3">
           <button className="btn btn-primary mx-2" onClick={toggleStyle}>Enable Dark mode</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

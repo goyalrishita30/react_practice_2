@@ -36,7 +36,7 @@ function App() {
       <Navbar title="TextUtils" aboutText="About us" mode={mode} toggleMode={toggleMode}></Navbar>
         <Alert alert={alert}></Alert>
         <Routes>
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About mode={mode}/>} />
           <Route
             path="/"
             element={
