@@ -1,0 +1,115 @@
+.home {
+    height: 90vh;
+    justify-content: center;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-container {
+    width: auto;
+}
+
+.home .header-container h1 {
+    /* font-size: 70px; */
+    /* text-align: center; */
+    justify-items: center;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(255, 255, 255, 0.801);
+}
+
+.home .header-container p{
+    margin-top: 15px;
+    padding: 0px;
+    /* font-size: 40px; */
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.801);
+}
+
+.home .header-container button{
+    background-color: rgba(255, 255, 255, 0.801);
+    margin-top: 15px;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    /* height: 50px;
+    width: 180px;
+    font-size: 20px; */
+}
+
+.header-container button:hover {
+    background-color: rgba(255, 255, 255, 0.973);
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+/* mobile view */
+
+@media only screen and (max-width:600px) {
+    .home{
+        justify-content: center;
+        align-items: center;
+    }
+    .header-container {
+        border-radius: 10px;
+        width: 65%;
+        justify-items: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+        height: 50%;
+        /* padding: 15px */
+    }
+    .header-container h1{
+        /* height: 30px; */
+        align-items: left;
+        font-size: 2.5rem;
+        margin: 8%;
+        
+    }
+    .header-container p{
+        margin: 8%;
+        align-items: left;
+        /* margin-left: 3%; */
+        /* padding: 0px; */
+        font-size: 1.5rem;
+    }
+    .header-container button{
+        /* margin: 5%; */
+        /* margin-top: 15px;
+        margin-left: 3%; */
+        /* height: 30px; */
+        font-size: 1.5rem;
+        /* height: 70%; */
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
+        
+    }
+}
+@media only screen and (min-width:600px) {
+    .header-container{
+        margin-left: 30px;
+    }
+
+    .home .header-container h1 {
+        font-size: 70px;
+    }
+    
+    .home .header-container p{
+        font-size: 40px;
+    }
+    
+    .home .header-container button{
+        height: 50px;
+        width: 180px;
+        font-size: 20px;
+    }
+}
