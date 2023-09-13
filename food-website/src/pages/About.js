@@ -5,7 +5,7 @@ import Layout from "../components/Layout/Layout";
 const About = () => {
   return (
     <Layout>
-      <Box sx={{my:15, textAlign:"center", "& h4"}}>
+      <Box sx={{my:15, textAlign:"center"}}>
         <Typography variant="h4">
           Welcome to my restaurant!
         </Typography>
